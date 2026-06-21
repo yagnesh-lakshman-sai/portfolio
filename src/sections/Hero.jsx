@@ -201,11 +201,11 @@ export default function Hero() {
 
             {/* Heading */}
             <motion.div variants={itemVariants} className="space-y-1">
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black leading-[0.95] text-white">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-tight font-black leading-[0.95] text-white">
                 Yagnesh Lakshman Sai
               </h1>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl leading-tight font-black">
                 <span className="text-gradient">Dangudubiyyam</span>
               </h1>
             </motion.div>
@@ -235,7 +235,7 @@ export default function Hero() {
             {/* Buttons */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-wrap gap-3 pt-2"
+              className="flex flex-col sm:flex-row gap-3 pt-2"
             >
               <motion.button
                 onClick={() => scrollToSection("projects")}
@@ -298,7 +298,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative flex items-center justify-center lg:ml-16"
+            className="hidden lg:flex relative items-center justify-center lg:ml-16"
           >
             {/* Central architecture visual */}
             <div className="relative w-full max-w-md aspect-square lg:translate-x-16">

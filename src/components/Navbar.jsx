@@ -98,7 +98,18 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-slate-400 hover:text-white transition-colors"
+  className="
+md:hidden
+flex
+items-center
+justify-center
+w-10
+h-10
+text-cyan-400
+hover:text-white
+z-[100]
+"
+
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -121,7 +132,7 @@ export default function Navbar() {
                   exit={{ rotate: -90, opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <Menu size={20} />
+                  <Menu size={24} />
                 </motion.div>
               )}
             </AnimatePresence>

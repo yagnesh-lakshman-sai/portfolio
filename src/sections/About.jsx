@@ -88,7 +88,7 @@ export default function About() {
             transition={{ duration: 0.7 }}
             className="relative"
           >
-            <div className="relative max-w-sm mx-auto">
+            <div className="relative w-full max-w-sm mx-auto">
               {/* Image placeholder (professional frame) */}
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -99,15 +99,29 @@ rounded-3xl
 overflow-hidden
 glass-card
 glow-border
-w-[450px]
-h-[630px]
+w-full
+max-w-[450px]
+min-h-[620px]
 mx-auto
 border border-cyan-500/10
+px-4
 "
               >
                 <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-[#0a0f1e] to-[#020817]">
                   <div className="text-center">
-                    <div className="w-80 h-80 mx-auto mb-7 rounded-full overflow-hidden border-2 border-cyan-500 shadow-[0_0_60px_rgba(34,211,238,0.4)]">
+                    <div
+                      className="
+w-52 h-52
+sm:w-64 sm:h-64
+lg:w-80 lg:h-80
+mx-auto
+mb-7
+rounded-full
+overflow-hidden
+border-2 border-cyan-500
+shadow-[0_0_60px_rgba(34,211,238,0.4)]
+"
+                    >
                       <img
                         src="/Yagnesh2.png"
                         alt="Profile Pic"
@@ -115,12 +129,36 @@ border border-cyan-500/10
                       />
                     </div>
 
-                    <h3 className="text-2xl font-bold text-white mb-2">
-                      Yagnesh Lakshman Sai Dangudubiyyam
+                    <h3
+                      className="
+text-xl
+sm:text-2xl
+font-bold
+text-white
+mb-2
+text-center
+leading-tight
+px-4
+"
+                    >
+                      Yagnesh Lakshman Sai
+                      <br />
+                      Dangudubiyyam
                     </h3>
 
-                    <p className="text-cyan-400 text-sm">
-                      Java Full Stack Developer • Spring Boot • React
+                    <p
+                      className="
+text-cyan-400
+text-xs
+sm:text-sm
+text-center
+leading-relaxed
+px-4
+"
+                    >
+                      Java Full Stack Developer
+                      <br />
+                      Spring Boot • React
                     </p>
 
                     {/* Social Icons */}
@@ -201,7 +239,7 @@ border border-cyan-500/10
             </div>
 
             {/* Feature cards */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {featureCards.map((card, i) => (
                 <motion.div
                   key={card.title}
@@ -236,7 +274,7 @@ hover:shadow-[0_0_30px_rgba(0,212,255,0.08)]
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 pt-2">
               {stats.map((stat, i) => (
                 <motion.div
                   key={stat.label}

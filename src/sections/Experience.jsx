@@ -16,7 +16,7 @@ function TimelineItem({ exp, index, isLast }) {
         <div className="absolute left-1/2 top-12 -translate-x-1/2 w-px h-full bg-gradient-to-b from-cyan-400/30 via-cyan-400/10 to-transparent hidden md:block" />
       )}
 
-      <div className="grid md:grid-cols-2 gap-8 items-center mb-16 md:mb-24 relative">
+      <div className="grid md:grid-cols-2 gap-8 items-center mb-10 md:mb-24 relative">
         {/* Content - alternating sides */}
         <motion.div
           initial={{ opacity: 0, x: isEven ? -40 : 40 }}
@@ -28,7 +28,7 @@ function TimelineItem({ exp, index, isLast }) {
             className="
 glass-card
 rounded-3xl
-p-6
+p-5 sm:p-6
 border border-white/5
 transition-all duration-500
 hover:border-cyan-400/20
@@ -51,9 +51,9 @@ rounded-full
               </span>
               <span className="text-xs text-slate-500">{exp.duration}</span>
             </div>
-            <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
+            <h3 className="text-lg sm:text-xl font-bold text-white mb-1 leading-tight">{exp.role}</h3>
             <p
-              className="text-base font-semibold mb-3"
+              className="text-sm sm:text-base font-semibold mb-3"
               style={{ color: exp.color }}
             >
               {exp.company}
@@ -65,7 +65,7 @@ rounded-full
               {exp.highlights.map((h) => (
                 <div
                   key={h}
-                  className="flex items-start gap-3 text-sm text-slate-500"
+                  className="flex items-start gap-3 text-xs sm:text-sm text-slate-500"
                 >
                   <span
                     className="mt-1 w-1 h-1 rounded-full flex-shrink-0"
@@ -105,7 +105,7 @@ rounded-full
         </div>
 
         {/* Mobile node */}
-        <div className="md:hidden flex items-center gap-3 -mt-2 mb-2">
+        <div className="md:hidden flex items-center gap-3 mb-4">
           <div
             className="w-10 h-10 rounded-full glass-card flex items-center justify-center border-2"
             style={{ borderColor: `${exp.color}40` }}

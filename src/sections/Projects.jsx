@@ -33,9 +33,6 @@ function ProjectCard({ project, index }) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
-      style={{ rotateX, rotateY, transformStyle: "preserve-3d" }}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       className="group relative glass-card rounded-2xl overflow-hidden"
     >
       {/* Animated top border */}
@@ -63,7 +60,7 @@ function ProjectCard({ project, index }) {
         }}
       />
 
-      <div className="relative z-10 p-8">
+      <div className="relative z-10 p-5 sm:p-8">
         {/* Header */}
         <div className="flex items-start justify-between mb-4">
           <div>
@@ -77,7 +74,7 @@ function ProjectCard({ project, index }) {
             >
               {project.type}
             </span>
-            <h3 className="text-2xl font-bold text-white mb-1">
+            <h3 className="text-xl sm:text-2xl font-bold text-white mb-1 leading-tight">
               {project.title}
             </h3>
             <p className="text-sm text-slate-400">{project.subtitle}</p>
@@ -90,7 +87,7 @@ function ProjectCard({ project, index }) {
         </p>
 
         {/* Features */}
-        <div className="grid sm:grid-cols-2 gap-2 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
           {project.features.map((feature, i) => (
             <motion.div
               key={feature}
@@ -122,7 +119,7 @@ function ProjectCard({ project, index }) {
         </div>
 
         {/* Buttons */}
-        <div className="flex gap-3 flex-wrap">
+        <div className="flex flex-col sm:flex-row gap-3">
           {/* Code */}
           <motion.a
             href={project.github}
@@ -130,7 +127,11 @@ function ProjectCard({ project, index }) {
             rel="noopener noreferrer"
             whileHover={{ y: -2, borderColor: `${project.color}60` }}
             whileTap={{ scale: 0.97 }}
-            className="flex items-center gap-2 px-4 py-2 border border-slate-700 rounded-lg text-sm text-slate-300 hover:text-white transition-all duration-300"
+            className="
+w-full
+sm:w-auto
+justify-center
+flex items-center gap-2 px-4 py-2 border border-slate-700 rounded-lg text-sm text-slate-300 hover:text-white transition-all duration-300"
           >
             <FaGithub size={15} />
             Code
@@ -186,13 +187,20 @@ function ProjectCard({ project, index }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="max-w-5xl w-full rounded-2xl overflow-hidden border border-white/10"
+              className="
+max-w-5xl
+w-full
+max-h-[90vh]
+overflow-auto
+rounded-2xl
+border border-white/10
+"
               onClick={(e) => e.stopPropagation()}
             >
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </motion.div>
           </div>
@@ -225,7 +233,7 @@ export default function Projects() {
           />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
