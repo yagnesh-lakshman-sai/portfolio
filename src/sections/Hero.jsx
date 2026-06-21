@@ -298,7 +298,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="hidden lg:flex relative items-center justify-center lg:ml-16"
+            className="relative flex items-center justify-center mt-10 lg:mt-0 lg:ml-16"
           >
             {/* Central architecture visual */}
             <div className="relative w-full max-w-md aspect-square lg:translate-x-16">

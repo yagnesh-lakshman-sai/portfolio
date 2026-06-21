@@ -43,15 +43,14 @@ export default function Navbar() {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
-            className="flex items-center gap-2 group flex-shrink-0"
+            className="flex items-center gap-2 group"
             whileHover={{ scale: 1.02 }}
           >
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-400/20 to-blue-600/20 border border-cyan-400/30 flex items-center justify-center group-hover:border-cyan-400/60 transition-all duration-300">
               <Code2 size={16} className="text-cyan-400" />
             </div>
-            <span className="font-mono font-bold text-xs sm:text-sm text-white tracking-tight whitespace-nowrap">
-              Yagnesh
-              <span className="text-cyan-400 hidden sm:inline"> Portfolio</span>
+            <span className="font-mono font-bold text-sm text-white tracking-tight">
+              Yagnesh<span className="text-cyan-400"> Portfolio</span>
             </span>
           </motion.a>
 
@@ -99,27 +98,33 @@ export default function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
+            className="md:hidden text-slate-400 hover:text-white transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="
-    md:hidden
-    ml-auto
-    flex
-    items-center
-    justify-center
-    w-12
-    h-12
-    text-cyan-400
-    hover:text-white
-    relative
-    z-[9999]
-  "
             aria-label="Toggle menu"
           >
-            {menuOpen ? (
-              <span className="text-3xl text-cyan-400">✕</span>
-            ) : (
-              <span className="text-3xl text-cyan-400">☰</span>
-            )}
+            <AnimatePresence mode="wait">
+              {menuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <X size={20} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="open"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.15 }}
+                >
+                  <Menu size={20} />
+                </motion.div>
+              )}
+            </AnimatePresence>
           </button>
         </div>
       </div>
