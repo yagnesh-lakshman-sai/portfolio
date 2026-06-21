@@ -174,7 +174,7 @@ export default function Hero() {
         />
       ))}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-16 overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-16 overflow-visible">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh]">
           {/* Left: Content */}
           <motion.div

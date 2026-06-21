@@ -19,16 +19,16 @@
   section {
     scroll-margin-top: 90px;
   }
+  html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
   body {
     background-color: #020817;
     color: #e2e8f0;
     font-family: "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    html,
-    body {
-      width: 100%;
-      overflow-x: hidden;
-    }
   }
 
   ::-webkit-scrollbar {
