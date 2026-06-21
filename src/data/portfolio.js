@@ -121,7 +121,7 @@ export const projects = [
 
     color: "#10b981",
 
-    github: "https://github.com/yagnesh-lakshman-sai/MedSync",
+    github: "https://github.com/yagnesh-lakshman-sai/MedSync-HealthCare",
 
     demo: null,
 
