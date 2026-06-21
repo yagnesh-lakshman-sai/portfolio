@@ -79,7 +79,7 @@ function FloatingBadge({ icon: Icon, label, color, delay, style }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: delay + 1, duration: 0.5 }}
       style={style}
-      className="absolute hidden lg:flex items-center gap-2 glass-card rounded-full px-3 py-1.5 text-xs font-mono"
+      className="absolute hidden lg:flex items-center gap-2 glass-card rounded-full px-3 py-1.5 text-xs font-mono overflow-hidden"
     >
       <motion.div
         animate={{ y: [0, -4, 0] }}
@@ -142,17 +142,13 @@ export default function Hero() {
 
   return (
     <section
-      ref={heroRef}
-      className="relative min-h-screen flex items-center bg-[#020817]"
-    >
+  ref={heroRef}
+  className="relative min-h-screen flex items-center bg-[#020817]"
+>
       {/* Animated grid background */}
       <div className="absolute inset-0 grid-bg opacity-60" />
 
       {/* Radial glow */}
-      <motion.div
-        style={{ x: springX, y: springY }}
-        className="absolute top-1/4 left-1/4 w-[800px] h-[800px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"
-      />
       <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Particles */}
@@ -178,7 +174,7 @@ export default function Hero() {
         />
       ))}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-16 overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[85vh]">
           {/* Left: Content */}
           <motion.div

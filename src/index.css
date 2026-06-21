@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -8,23 +8,27 @@
   * {
     box-sizing: border-box;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
 
   html {
-  font-size: 90%;
-}
-section {
-  scroll-margin-top: 90px;
-}
+    font-size: 90%;
+  }
+  section {
+    scroll-margin-top: 90px;
+  }
   body {
     background-color: #020817;
     color: #e2e8f0;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
-    overflow-x: hidden;
+    html,
+    body {
+      width: 100%;
+      overflow-x: hidden;
+    }
   }
 
   ::-webkit-scrollbar {
@@ -66,7 +70,9 @@ section {
 
   .glow-border {
     border: 1px solid rgba(34, 211, 238, 0.3);
-    box-shadow: 0 0 20px rgba(34, 211, 238, 0.1), inset 0 0 20px rgba(34, 211, 238, 0.02);
+    box-shadow:
+      0 0 20px rgba(34, 211, 238, 0.1),
+      inset 0 0 20px rgba(34, 211, 238, 0.02);
   }
 
   .glow-text {
@@ -78,7 +84,7 @@ section {
   }
 
   .grid-bg {
-    background-image: 
+    background-image:
       linear-gradient(rgba(34, 211, 238, 0.04) 1px, transparent 1px),
       linear-gradient(90deg, rgba(34, 211, 238, 0.04) 1px, transparent 1px);
     background-size: 60px 60px;

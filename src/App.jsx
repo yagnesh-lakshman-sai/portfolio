@@ -21,7 +21,7 @@ function SectionFallback() {
 
 function App() {
   return (
-    <div className>
+    <div>
       <Navbar />
       <main>
         <Hero />

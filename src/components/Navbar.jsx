@@ -18,10 +18,19 @@ export default function Navbar() {
   ]);
 
   const handleNavClick = (href) => {
-    setMenuOpen(false);
-    const el = document.getElementById(href.replace("#", ""));
-    if (el) el.scrollIntoView({ behavior: "smooth" });
-  };
+  setMenuOpen(false);
+
+  setTimeout(() => {
+    const element = document.querySelector(href);
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, 200);
+};
 
   return (
     <motion.header
