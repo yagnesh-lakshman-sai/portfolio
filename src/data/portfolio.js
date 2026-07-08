@@ -54,7 +54,7 @@ export const skills = {
 
 export const projects = [
   {
-  id: 2,
+  id: 1,
   title: "VaultEdge",
   subtitle: "Secure Digital Banking Platform",
   description:
@@ -89,7 +89,7 @@ export const projects = [
   type: "Full Stack"
 },
   {
-    id: 1,
+    id: 2,
     title: "MedSync",
     subtitle: "Healthcare Management Microservices Platform",
     description:
@@ -251,7 +251,7 @@ export const experiences = [
   role: "Java Backend Developer",
   company: "VaultEdge (Personal Project)",
   period: "2025",
-  duration: "3 Months",
+  duration: "5 Months",
   description:
     "Built a production-oriented digital banking platform using Spring Boot and React with secure authentication, transaction management, and scalable backend architecture.",
   highlights: [
@@ -268,7 +268,7 @@ export const experiences = [
   role: "Java Microservices Developer",
   company: "MedSync (Personal Project)",
   period: "2026",
-  duration: "2 Months",
+  duration: "5 Months",
   description:
     "Designed and implemented a scalable hospital management system using Spring Boot microservices architecture with secure communication and cloud integrations.",
   highlights: [
