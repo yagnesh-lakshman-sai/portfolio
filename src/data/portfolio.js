@@ -123,7 +123,7 @@ export const projects = [
 
     github: "https://github.com/yagnesh-lakshman-sai/MedSync-HealthCare",
 
-    demo: null,
+    demo: "https://med-sync-ai-health-care-ui.vercel.app",
 
     type: "Microservices",
   },
