@@ -54,7 +54,7 @@ export const skills = {
 
 export const projects = [
   {
-  id: 1,
+  id: 2,
   title: "VaultEdge",
   subtitle: "Secure Digital Banking Platform",
   description:
@@ -89,7 +89,7 @@ export const projects = [
   type: "Full Stack"
 },
   {
-    id: 2,
+    id: 1,
     title: "MedSync",
     subtitle: "Healthcare Management Microservices Platform",
     description:
