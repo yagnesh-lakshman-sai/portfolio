@@ -123,7 +123,7 @@ shadow-[0_0_60px_rgba(34,211,238,0.4)]
 "
                     >
                       <img
-                        src="/Yagnesh2.png"
+                        src="/Yagnesh5959.png"
                         alt="Profile Pic"
                         className="w-full h-full object-cover"
                       />
