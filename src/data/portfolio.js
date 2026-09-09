@@ -166,7 +166,7 @@ export const achievements = [
 
   {
     id: 2,
-    title: "Enterprise Projects",
+    title: "Production Projects",
     subtitle: "Production-Oriented Systems",
     description:
       "Designed and developed secure full-stack applications using Spring Boot, React, JWT authentication, and MySQL.",
